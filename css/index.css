@@ -47,3 +47,40 @@ body{
 	}
 }
 
+/* Footer表示*/
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin: 0px;
+    padding: 10px;
+    border: none;
+}
+
+footer>#Chara{
+    z-index: 13;
+}
+
+footer>#Point>img{
+    float: left;
+    margin-right: 10%;
+    z-index: 12;
+}
+footer>#Point>#Flow2>img{
+    float: left;
+    margin-right: 2%;
+    z-index: 12;
+}
+footer>#Point>#Flow2>img:last-child{
+    margin-right: 10%;
+}
+footer>#Line{
+    width: 90%;
+    margin-top: 13px;
+    margin-left: 10px;
+    padding: 0px;
+    font-size: 3px;
+    background-color: deeppink;
+    color: deeppink;
+    z-index: 11;
+}
