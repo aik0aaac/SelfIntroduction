@@ -52,6 +52,11 @@ $(function(){
             getPage(link);
             if(link != "pagethanks.html"){
                 $(".next").fadeIn("slow");
+//                $(".next").css({
+//                    "width": "100px",
+//                    "margin-left": "auto",
+//                    "background-color": "rgba(0, 255, 255, 0.5)"
+//                })
             }
         });		
 	});
