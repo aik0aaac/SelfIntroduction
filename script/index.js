@@ -28,7 +28,7 @@ $('footer>#Chara').click(function(){
 var Flag_Page = {
     "pageindex.html":0, "page1.html":0, "page2.html":0,
     "page2_1.html":0, "page2_2.html":0, "page3.html":0,
-    "page4.html":0, "page5.html":0,
+    "page4.html":0,
 };
 
 //NEXTで次のページへ遷移------------------------------
@@ -52,11 +52,11 @@ $(function(){
             getPage(link);
             if(link != "pagethanks.html"){
                 $(".next").fadeIn("slow");
-//                $(".next").css({
-//                    "width": "100px",
-//                    "margin-left": "auto",
-//                    "background-color": "rgba(0, 255, 255, 0.5)"
-//                })
+                $(".next").css({
+                    "width": "100px",
+                    "margin-left": "auto",
+                    "background-color": "rgba(0, 255, 255, 0.5)"
+                })
             }
         });		
 	});

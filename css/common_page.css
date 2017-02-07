@@ -2,8 +2,26 @@ body{
     background-color: transparent;
     overflow:hidden;
 }
-
-/*page1 ----------------------*/
+ul{
+    list-style-type: square;
+}
+/*pagestart ----------------------*/
 #PSTART h1, #PSTART h2{
     text-align: center;
+}
+
+/*page1 ----------------------*/
+#P1 img{
+    width: 50%;
+    height: auto;
+}
+
+/*page2-1 ----------------------*/
+#P2_1 #gallery {
+    width: 100%;
+    position: relative;
+}
+#P2_1 .fancybox{
+    margin: 10px;
+    padding: 5px;
 }
