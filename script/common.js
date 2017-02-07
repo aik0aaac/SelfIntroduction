@@ -4,16 +4,6 @@ jQuery(function($){
     
     var $container = $('#gallery');
     $container.imagesLoaded(function(){
-//        $.each($("#gallery a"), function(i, val) {
-//            var w = $(val).width()/10;
-//            var h = $(val).height()/10;
-//            console.log("number is"+i);
-//            console.log("w is "+w+" h is "+h);
-//            $(val).css({
-//                'width':w,
-//                'height':h
-//            })
-//        });
 
         $container.masonry({
         itemSelector: '.fancybox',

@@ -37,8 +37,9 @@ $(function(){
 	var $content = $('.pageDisplay');
 	//ボタンをクリックした時の処理
 	$(document).on('click', '.next', function(event) {
-        $(".next").fadeOut("slow");
-		//まだ行ってないページのリンク先を検索、保存
+        $('.next').fadeOut("slow");
+        //        $(".next").stop().animate({opacity:'0'},500);
+        //まだ行ってないページのリンク先を検索、保存
         for(var f in Flag_Page){
             if(!Flag_Page[f]){
                 var link = f;
@@ -51,12 +52,9 @@ $(function(){
         $content.fadeOut(600, function() {
             getPage(link);
             if(link != "pagethanks.html"){
-                $(".next").fadeIn("slow");
-                $(".next").css({
-                    "width": "100px",
-                    "margin-left": "auto",
-                    "background-color": "rgba(0, 255, 255, 0.5)"
-                })
+                $(".next").html("NEXT");
+                $('.next').fadeIn("slow");
+    //            $(".next").stop().animate({opacity:'1'},500);
             }
         });		
 	});
@@ -71,6 +69,18 @@ $(function(){
             dataType: 'html',
             success: function(data){
                 $content.html(data).fadeIn(600);
+                var $container = $('img');
+                $container.imagesLoaded(function(){
+                    //page1の設定---------------------------------
+                    $.each($("#P1 .img-box"), function(i, val) {
+                        var w = $(val).innerWidth();
+                        var h = $(val).innerHeight();
+                        $(val).css({
+                            'width':w,
+                            'height':h
+                        })
+                    });
+                });        
             },
             error:function() {
                        alert('問題がありました。');

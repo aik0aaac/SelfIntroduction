@@ -24,7 +24,7 @@ html, body{
 	top: 0px;
 	left: 0px;
 	background-color: #6bb8d4;
-	z-index: 10;
+	z-index: 110;
 }
 #Logo>img{
 	position: fixed;
@@ -36,7 +36,7 @@ html, body{
 	margin-left: -100px;
 	width: 40%;
 	height: 40%;
-	z-index: 11;
+	z-index: 111;
 	animation-name: show;
 	animation-duration: 1s;
 }
@@ -95,15 +95,15 @@ footer>#Line{
     height: 90%;
     margin-top: 5%;
     z-index: 2;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0);
 }
 
 /*NEXT等の矢印-----------------*/
 .next{
+    position: fixed;
     width: 100px;
-    margin-top: 300px;
-    margin-left: auto;
-    background-color: rgba(0, 255, 255, 0.5);
-    z-index: 3;
+    top: 70%;
+    right: 0;
+    z-index: 100;
 }
 

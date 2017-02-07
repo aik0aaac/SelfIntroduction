@@ -1,21 +1,61 @@
 body{
     background-color: transparent;
-    overflow:hidden;
 }
 ul{
     list-style-type: square;
 }
+.img-box{
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.7);
+}
+
+/*start, thanks以外のpage全体にかかるCSS --------------*/
+.P{
+    padding: 80px;
+}
+.P h1{
+    margin-top: -2em;
+    padding; 0px;
+    width: 5em;
+    transform: rotate(-5deg);
+}
+.P h2{
+    margin-top: 0;
+    margin-bottom: 50px;
+    padding; 0px;
+    width: 10em;
+    transform: rotate(-5deg);
+}
 /*pagestart ----------------------*/
-#PSTART h1, #PSTART h2{
+#PSTART, #PTHANKS{
+    padding-top: 10%;
     text-align: center;
 }
 
 /*page1 ----------------------*/
-#P1 img{
-    width: 50%;
-    height: auto;
+#P1 .box1{
+    float: left;
+    height: 500px;
 }
-
+#P1 .box2{
+    float: right;
+    width: 60%;
+    transform: rotate(-5deg);
+}
+#P1 .box3{
+    float: right;
+    width: 60%;
+    margin-top: -100px;
+    margin-right: -50px;
+    z-index: 5;
+    transform: rotate(0deg);
+}
+#P1 img{
+    width: 300px;
+}
 /*page2-1 ----------------------*/
 #P2_1 #gallery {
     width: 100%;
@@ -24,4 +64,12 @@ ul{
 #P2_1 .fancybox{
     margin: 10px;
     padding: 5px;
+}
+
+/*page3 ----------------------*/
+#P3 .img-box{
+    width: 300px;
+}
+#P3 img{
+    width: 300px;
 }
