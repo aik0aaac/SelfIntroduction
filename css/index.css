@@ -1,42 +1,142 @@
 html, body{
     height: 100%;
-/*    background-image: url(../img/bg_base.jpg);*/
-      /* 画像を常に天地左右の中央に配置 */
-    background-position: top center;
-    background-repeat: 		no-repeat;
-    /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
-    background-attachment: fixed;
-	-moz-background-size:	cover;
-	background-size:		cover;
-    /* 背景画像が読み込まれる前に表示される背景のカラー */
-    background-color: #81D674;
+    background: -webkit-linear-gradient(#6CBAD8, #CAE7F2);
+    background: -o-linear-gradient(#6CBAD8, #CAE7F2);
+    background: linear-gradient(#6CBAD8, #CAE7F2);
 }
 .background{
     width: 100%;
     height: 90%;
 }
+
+/* 背景の装飾画像とか------------------- */
+#background_deco{
+    
+}
+.mountain1{
+    position: fixed; float: left; bottom: 0; width: 40%;
+    left: 0;
+    z-index: 3;
+}
+.mountain2{
+    position: fixed; float: left; bottom: 0; width: 40%;
+    right: 0;
+    z-index: 2;
+}
+.mountain3{
+    position: fixed; float: left; bottom: 0; width: 40%;
+    left: 30%;    
+    opacity: 0.7;
+    z-index: 1;
+}
+#c1{
+    position: fixed; float: left; bottom: 0;
+    left: 0;
+    width: 35%;
+    z-index: 4;
+}
+#c2{
+    position: fixed; float: left; bottom: 0;
+    left: 25%;
+    width: 20%;
+    z-index: 4;
+}
+#c3{
+    position: fixed; float: left; bottom: 0;
+    left: 40%;
+    width: 25%;
+    z-index: 4;
+}
+#c4{
+    position: fixed; float: left; bottom: 0;
+    left: 60%;
+    width: 30%;
+    z-index: 4;
+}
+#c5{
+    position: fixed; float: left; bottom: 0;
+    left: 80%;
+    width: 20%;
+    z-index: 4;
+}
+#c2-1{
+    position: fixed; float: left; bottom: 0;
+    left: 0;
+    width: 15%;
+    opacity: 0.8;
+    z-index: 3;
+}
+#c2-2{
+    position: fixed; float: left; bottom: 0;
+    left: 22%;
+    width: 10%;
+    opacity: 0.8;
+    z-index: 3;
+}
+#c2-3{
+    position: fixed; float: left; bottom: 0;
+    left: 35%;
+    width: 10%;
+    opacity: 0.7;
+    z-index: 3;
+}
+#c2-4{
+    position: fixed; float: left; bottom: 0;
+    left: 45%;
+    width: 7%;
+    opacity: 0.5;
+    z-index: 3;
+}
+#c2-5{
+    position: fixed; float: left; bottom: 0;
+    left: 56%;
+    width: 10%;
+    opacity: 0.7;
+    z-index: 3;
+}
+#c2-6{
+    position: fixed; float: left; bottom: 0;
+    left: 60%;
+    width: 15%;
+    opacity: 0.8;
+    z-index: 3;
+}
+#c2-7{
+    position: fixed; float: left; bottom: 0;
+    left: 75%;
+    width: 10%;
+    opacity: 0.8;
+    z-index: 3;
+}
+#c2-8{
+    position: fixed; float: left; bottom: 0;
+    left: 85%;
+    width: 5%;
+    opacity: 0.7;
+    z-index: 3;
+}
 /* Logo表示画面 -----------------------*/
 #Logo-bg{
     display: none;
-	position: fixed;
+	position: absolute;
 	width: 110%;
 	height: 110%;
-	top: 0px;
-	left: 0px;
-	background-color: #6bb8d4;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+	background-color: #DF81A2;
 	z-index: 110;
 }
 #Logo>img{
-	position: fixed;
-	width: 200px;
-	height: 200px;
-	top: 50%;
-	left: 50%;
-	margin-top: -100px;
-	margin-left: -100px;
-	width: 40%;
-	height: 40%;
-	z-index: 111;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    margin: auto;
+    width: 128px;
+    z-index: 111;
 	animation-name: show;
 	animation-duration: 1s;
 }
@@ -59,6 +159,7 @@ footer{
     margin: 0px;
     padding: 10px;
     border: none;
+    z-index: 10;
 }
 
 footer>#Chara{
@@ -91,10 +192,11 @@ footer>#Line{
 
 /* pageDisplay表示 -------------------------*/
 .pageDisplay{
+    position: fixed;
     width: 100%;
     height: 90%;
     margin-top: 5%;
-    z-index: 2;
+    z-index: 10;
     background-color: rgba(255, 255, 255, 0);
 }
 

@@ -72,15 +72,33 @@ $(function(){
                 var $container = $('img');
                 $container.imagesLoaded(function(){
                     //page1の設定---------------------------------
-                    $.each($("#P1 .img-box"), function(i, val) {
-                        var w = $(val).innerWidth();
-                        var h = $(val).innerHeight();
-                        $(val).css({
-                            'width':w,
-                            'height':h
-                        })
-                    });
-                });        
+                    if(elm == "page1.html"){
+                        $.each($("#P1 .img-box"), function(i, val) {
+                            var w = $(val).innerWidth();
+                            var h = $(val).innerHeight();
+                            $(val).css({
+                                'width':w,
+                                'height':h
+                            })
+                        });
+                    }else if(elm == "page2_1.html"){
+                        //page2-1の設定---------------------------------
+                        jQuery(function($){
+                            $(".fancybox").attr('rel', 'group1').fancybox();
+
+                            var $container = $('#gallery');
+                            $container.imagesLoaded(function(){
+
+                                $container.masonry({
+                                itemSelector: '.fancybox',
+                                columnWidth: '.fancybox',
+                                isFitWidth: true,//親要素の幅に合わせてカラム数を自動調整
+                                percentPosition: true
+                                });
+                            });
+                        });
+                    }
+                });
             },
             error:function() {
                        alert('問題がありました。');

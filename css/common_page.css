@@ -15,55 +15,190 @@ ul{
 /*start, thanks以外のpage全体にかかるCSS --------------*/
 .P{
     padding: 80px;
+    z-index: 12;
 }
 .P h1{
-    margin-top: -2em;
-    padding; 0px;
+    position: absolute;
     width: 5em;
+    top: 2.3em;
+    left: 2em;
+    margin-top: -3.5em;
+    padding: .2em .5em;
+	background-color: #f6f6f6;
+    font-size: 38px;
+    border-bottom: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.5);
     transform: rotate(-5deg);
+    z-index: 14;
 }
+.P h1::before,
+.P h1::after {
+	content: '';
+	position: absolute;
+}
+.P h1::before {
+	top: 100%;
+	left: 0;
+	border-width: 0 15px 15px 0;
+	border-style: solid;
+	border-color: transparent;
+	border-right-color: #ccc;
+}
+.P h1::after {
+	top: 0;
+	right: 0;
+	z-index: 14;
+	border-width: 25px 20px;
+	border-style: solid;
+	border-color: transparent;
+	border-right-color: #fff;
+}
+.P h1:first-letter{
+	font-size: 1.5em;
+}
+
 .P h2{
-    margin-top: 0;
+    position: absolute;
+    width: 11em;
+    top: .5em;
+    left: 4em;
     margin-bottom: 50px;
-    padding; 0px;
-    width: 10em;
+    padding: .2em .5em;
+	background-color: #f6f6f6;
+    font-size: 30px;
+    border-bottom: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.5);
     transform: rotate(-5deg);
+    z-index: 14;
+}
+.P h2::before,
+.P h2::after {
+	content: '';
+	position: absolute;
+}
+.P h2::before {
+	top: 100%;
+	left: 0;
+	border-width: 0 15px 15px 0;
+	border-style: solid;
+	border-color: transparent;
+	border-right-color: #ccc;
+}
+.P h2::after {
+	top: 0;
+	right: 0;
+	z-index: 14;
+	border-width: 25px 20px;
+	border-style: solid;
+	border-color: transparent;
+	border-right-color: #fff;
+}
+.P h2:first-letter{
+	font-size: 1.5em;
+}
+.P .page_contents{
+    position: absolute;
+    top: 3em;
+    width: 90%;
+    height: 70%;
+    padding: 1em;
+    background-color: #663b1f;
+    border-radius: 5px;
+    z-index: 13;
+}
+.P .page_text{
+    padding: 1em;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
 }
 /*pagestart ----------------------*/
 #PSTART, #PTHANKS{
     padding-top: 10%;
     text-align: center;
+    color: white;
+    text-shadow: 0 15px 10px rgba(0,0,0,0.5);
+    text-shadow:
+        0 1px 0 #222,
+        0 2px 0 #5e5e5e,
+        0 3px 0 #111,
+        0 4px 0 #5e5e5e,
+        0 5px 0 #000,
+        0 6px 1px rgba(0,0,0,.1),
+        0 0 5px rgba(0,0,0,.1),
+        0 1px 3px rgba(0,0,0,.3),
+        0 3px 5px rgba(0,0,0,.2),
+        0 5px 10px rgba(0,0,0,.25),
+        0 10px 10px rgba(0,0,0,.2),
+        0 20px 20px rgba(0,0,0,.15);
+}
+
+/*pageindex ----------------------*/
+#PINDEX li{
+    padding-bottom: .2em;
+	border-bottom: 5px solid #ccc;
 }
 
 /*page1 ----------------------*/
 #P1 .box1{
     float: left;
-    height: 500px;
+    width: 100%;
+    height: 100%;
 }
 #P1 .box2{
+    position: absolute;
     float: right;
-    width: 60%;
+    top: 0;
+    right: 0;
+    width: 50%;
+    z-index: 15;
     transform: rotate(-5deg);
 }
 #P1 .box3{
+    position: absolute;
     float: right;
-    width: 60%;
-    margin-top: -100px;
-    margin-right: -50px;
-    z-index: 5;
+    width: 50%;
+    top: 200px;
+    right: -50px;
     transform: rotate(0deg);
 }
 #P1 img{
     width: 300px;
 }
+/*page2 ----------------------*/
+#P2 .select{
+    float: left;
+    width: 45%;
+    height: 100%;
+    margin: 0 .5em;
+    background-color: white;
+    font-size: 48px;
+    text-align: center;
+    text-shadow: 0 3px 1px #aaa;
+    border: 8px solid #333;
+    border-collapse: separate;
+    transition: .5s;
+}
+#P2 .mini{
+    font-size: 35px;
+    color: #888;
+    text-align: center;
+    
+}
+#P2 .select:hover{
+    background-color: blanchedalmond;
+    border: 1px solid #fff;
+    box-shadow: 0 0 20px #000;
+}
 /*page2-1 ----------------------*/
 #P2_1 #gallery {
+    position: absolute;
     width: 100%;
-    position: relative;
+    height: 100%;
 }
 #P2_1 .fancybox{
-    margin: 10px;
-    padding: 5px;
+    margin: 5px;
 }
 
 /*page3 ----------------------*/
