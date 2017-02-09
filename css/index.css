@@ -3,6 +3,7 @@ html, body{
     background: -webkit-linear-gradient(#6CBAD8, #CAE7F2);
     background: -o-linear-gradient(#6CBAD8, #CAE7F2);
     background: linear-gradient(#6CBAD8, #CAE7F2);
+    overflow: hidden;
 }
 .background{
     width: 100%;

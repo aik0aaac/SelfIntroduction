@@ -12,6 +12,75 @@ ul{
     box-shadow: 0px 0px 20px rgba(0,0,0,0.7);
 }
 
+/*start, thanksのCSS --------------*/
+#PSTART h1, #PTHANKS h1{
+	position:relative;
+    width: 10em;
+    margin:auto;
+	padding:10px 15px;
+	font:bold 48px/1.2 "マキナス";
+	color:#fff;
+	background:#c33;
+}
+#PSTART h1:before, #PTHANKS h1:before{
+	content:"<";
+	position:absolute;
+	top:middle;
+	left:-12px;
+	width:0;
+	height:0;
+	font-size: .7em;
+	line-height:1.0;
+	color:#c96;
+}
+#PSTART h1:after, #PTHANKS h1:after{
+	content:"";
+	position:absolute;
+	top:-2px;
+	left:-15px;
+	width:0;
+	height:130%;
+	border:#600 solid 4px;
+	border-radius:2px;
+	-webkit-transform: rotate(-2deg);
+	-moz-transform: rotate(-2deg);
+	-o-transform: rotate(-2deg);
+	transform: rotate(-2deg);
+}
+#PSTART h2, #PTHANKS h2{
+	position:relative;
+    width: 10em;
+    margin: .5em auto;
+	padding:10px 15px;
+	font:bold 40px/1.2 "マキナス";
+	color:#fff;
+	background:#c33;
+}
+#PSTART h2:before, #PTHANKS h2:before{
+	content: '';
+	width: 0px;
+	height: 0px;
+	border-width:35px 0px 35px 30px; 
+	border-color: transparent transparent transparent rgba(0,0,0,0.7);
+	border-style: solid;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+#PSTART h2:after, #PTHANKS h2:after{
+	content: '';
+	width: 0px;
+	height: 0px;
+	border-width:35px 30px 35px 0px; 
+	border-color: transparent rgba(0,0,0,0.7) transparent  transparent;
+	border-style: solid;
+	position: absolute;
+	top:0;
+	right: 0;
+	z-index: 1;
+}
+
 /*start, thanks以外のpage全体にかかるCSS --------------*/
 .P{
     padding: 80px;
@@ -24,35 +93,23 @@ ul{
     left: 2em;
     margin-top: -3.5em;
     padding: .2em .5em;
-	background-color: #f6f6f6;
+	background-color: #c33;
     font-size: 38px;
-    border-bottom: 1px solid #ccc;
+    color: white;
     border-radius: 3px;
-    box-shadow: 0px 5px 20px rgba(0,0,0,0.5);
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.8);
     transform: rotate(-5deg);
     z-index: 14;
 }
-.P h1::before,
-.P h1::after {
+.P h1::before {
 	content: '';
 	position: absolute;
-}
-.P h1::before {
 	top: 100%;
 	left: 0;
 	border-width: 0 15px 15px 0;
 	border-style: solid;
 	border-color: transparent;
-	border-right-color: #ccc;
-}
-.P h1::after {
-	top: 0;
-	right: 0;
-	z-index: 14;
-	border-width: 25px 20px;
-	border-style: solid;
-	border-color: transparent;
-	border-right-color: #fff;
+	border-right-color: rgba(0,0,0,0.7);
 }
 .P h1:first-letter{
 	font-size: 1.5em;
@@ -65,35 +122,23 @@ ul{
     left: 4em;
     margin-bottom: 50px;
     padding: .2em .5em;
-	background-color: #f6f6f6;
+	background-color: #c33;
     font-size: 30px;
-    border-bottom: 1px solid #ccc;
+    color: white;
     border-radius: 3px;
-    box-shadow: 0px 5px 20px rgba(0,0,0,0.5);
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.8);
     transform: rotate(-5deg);
     z-index: 14;
 }
-.P h2::before,
-.P h2::after {
+.P h2::before {
 	content: '';
 	position: absolute;
-}
-.P h2::before {
 	top: 100%;
 	left: 0;
 	border-width: 0 15px 15px 0;
 	border-style: solid;
 	border-color: transparent;
-	border-right-color: #ccc;
-}
-.P h2::after {
-	top: 0;
-	right: 0;
-	z-index: 14;
-	border-width: 25px 20px;
-	border-style: solid;
-	border-color: transparent;
-	border-right-color: #fff;
+	border-right-color: rgba(0,0,0,0.7);
 }
 .P h2:first-letter{
 	font-size: 1.5em;
@@ -166,6 +211,22 @@ ul{
 #P1 img{
     width: 300px;
 }
+#P1 .mini{
+    margin-left: 2em;
+    margin-bottom: .5em;
+    font-size: 0.7em;
+    color: #888;
+}
+#P1 #aik{
+    color: black;
+    background: -webkit-linear-gradient(transparent 60%, pink 60%);
+    background: -o-linear-gradient(transparent 60%, pink 60%);
+    background: linear-gradient(transparent 60%, pink 60%);
+}
+#P1 li:last-child{
+    font-size: 0.8em;
+    color: #888;
+}
 /*page2 ----------------------*/
 #P2 .select{
     float: left;
@@ -192,19 +253,126 @@ ul{
     box-shadow: 0 0 20px #000;
 }
 /*page2-1 ----------------------*/
+#P2_1 .page_text{
+    padding: 0.8em;
+}
 #P2_1 #gallery {
     position: absolute;
     width: 100%;
     height: 100%;
 }
 #P2_1 .fancybox{
-    margin: 5px;
+    margin: 3px;
+    padding: 2px;
 }
-
+#P2_1 .mini{
+    margin-left: 1em;
+    font-size: 0.7em;
+}
+/*page2-2 ----------------------*/
+#P2_2 .box1{
+    float: left;
+}
+#P2_2 .img-box:last-child{
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+#P2_2 img{
+    width: 600px;
+}
+#P2_2 #skills{
+    float: left;
+    margin-left: 150px;
+    height: 100%;
+}
+#P2_2 .mini{
+    font-size: .8em;
+    text-align: center;
+}
+#P2_2 .progress{
+    background-color: #aaa;
+}
 /*page3 ----------------------*/
-#P3 .img-box{
-    width: 300px;
-}
 #P3 img{
-    width: 300px;
+    width: 380px;
+}
+#P3 .box3>img{
+    width: 480px;
+}
+#P3 .box1{
+    position: absolute;
+    width: 400px;
+    font-size: .8em;
+    transform: rotate(-5deg);
+}
+#P3 .box2{
+    position: absolute;
+    top: 150px;
+    left: 300px;
+    width: 400px;
+    font-size: .8em;
+    transform: rotate(5deg);
+}
+#P3 .box3{
+    position: absolute;
+    left: 55%;
+    width: 500px;
+}
+#P3 .page_text{
+    position: absolute;
+    top: 350px;
+    left: 65%;
+    background-color: white;
+    font-size: .7em;
+    text-align: center;
+    box-shadow: 0 0 20px #000;
+}
+#P3 .page_text:before {
+	content: "";
+	position: absolute;
+	top: -8px; left: 50%;
+	margin-left: -9px;
+	display: block;
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 0 9px 9px 9px;
+	border-color: transparent transparent #FFF transparent;
+	z-index: 12;
+}
+#P3 .page_text:after {
+	content: "";
+	position: absolute;
+	top: -12px; left: 50%;
+	margin-left: -10px;
+	display: block;
+	width: 0px;
+	height: 0px;
+	z-index: 11;
+}
+#P3 #littlenoahID{
+    background: -webkit-linear-gradient(transparent 60%, pink 60%);
+    background: -o-linear-gradient(transparent 60%, pink 60%);
+    background: linear-gradient(transparent 60%, pink 60%);
+}
+#P3 .mini{
+    font-size: .9em;
+}
+/*page4 ----------------------*/
+#P4 .box1{
+    float: left;
+    width: 50%;
+    height: 100%;
+    margin-right: 100px;
+}
+#P4 .box2{
+    float: left;
+    height: 100%;
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;}
+#P4 .mini{
+    font-size: .7em;
 }

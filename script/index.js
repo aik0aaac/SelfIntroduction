@@ -6,6 +6,10 @@
     }), 1000);
 })();
 
+function imgBoxP2_2Show(){
+    $("#P2_2 .img-box:last-child").fadeIn("slow");
+};
+
 //フローバーの表示、操作------------------------------
 function FlowcharaMove(){
     
@@ -86,16 +90,25 @@ $(function(){
                         jQuery(function($){
                             $(".fancybox").attr('rel', 'group1').fancybox();
 
-                            var $container = $('#gallery');
+                            var $container = $('#P2_1 #gallery');
                             $container.imagesLoaded(function(){
 
                                 $container.masonry({
                                 itemSelector: '.fancybox',
-                                columnWidth: '.fancybox',
+                                columnWidth: 8,
                                 isFitWidth: true,//親要素の幅に合わせてカラム数を自動調整
                                 percentPosition: true
                                 });
                             });
+                        });
+                    }else if(elm == "page2_2.html"){
+                        $.each($("#P2_2 .img-box"), function(i, val) {
+                            var w = $(val).innerWidth();
+                            var h = $(val).innerHeight();
+                            $(val).css({
+                                'width':w,
+                                'height':h
+                            })
                         });
                     }
                 });
