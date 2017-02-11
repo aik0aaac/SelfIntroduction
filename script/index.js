@@ -1,9 +1,19 @@
 (function() {
     $("#Logo-bg").css({"display": "block"});
     console.log("aa")
-    setTimeout((function(){
-        $("#Logo-bg").fadeOut("slow");
-    }), 1000);
+    
+    new Vivus('LogoSVG',
+               {
+                start: 'autostart',
+                type: 'async',
+                duration: 200,
+                animTimingFunction: Vivus.EASE
+               }, function(){
+        setTimeout(function(){
+            $("#Logo-bg").fadeOut("slow");
+        },500);
+    });
+    
 })();
 
 function imgBoxP2_2Show(){
@@ -11,28 +21,18 @@ function imgBoxP2_2Show(){
 };
 
 //フローバーの表示、操作------------------------------
-function FlowcharaMove(){
-    
+function FlowcharaMove(val){
+    var off = $("footer>#Point #"+val).offset();
+    console.log("footer>#Point #"+val)
+    console.log(off.left)
+    $('footer>#Chara').animate({'left': off.left-20}, 1500);
+
 }
 
-// Charaの幅を取得して代入
-var FlowcharaCurrent;
-var FlowcharaWidth = $('footer>#Chara').outerWidth();
-var FlowPoint = 6;
-console.log(FlowcharaWidth);
- 
-// NEXTボタンが押されたとき
-$('footer>#Chara').click(function(){
-  FlowcharaCurrent += FlowcharaWidth;
-  $('.slideSet').animate({
-//      marginLeft: "20px";
-  });
-});
-
 var Flag_Page = {
-    "pageindex.html":0, "page1.html":0, "page2.html":0,
+    "pagestart.html":1, "pageindex.html":0, "page1.html":0, "page2.html":0,
     "page2_1.html":0, "page2_2.html":0, "page3.html":0,
-    "page4.html":0,
+    "page4.html":0, "pagethanks.html":0,
 };
 
 //NEXTで次のページへ遷移------------------------------
@@ -50,7 +50,6 @@ $(function(){
                 Flag_Page[f] = 1;
                 break;
             }
-            var link = "pagethanks.html";
         }
         //ページ内容のフェードアウト、ページ表示へ
         $content.fadeOut(600, function() {
@@ -58,8 +57,20 @@ $(function(){
             if(link != "pagethanks.html"){
                 $(".next").html("NEXT");
                 $('.next').fadeIn("slow");
-    //            $(".next").stop().animate({opacity:'1'},500);
             }
+            //フローキャラの立ち位置を変える
+            if(Flag_Page["pagethanks.html"] == 1){
+                FlowcharaMove("THANKS");
+                $('footer>#Chara').css({'transform': 'scale(1, 1)'});
+            }
+            else if(Flag_Page["page4.html"] == 1){ FlowcharaMove("P4"); }
+            else if(Flag_Page["page3.html"] == 1){ FlowcharaMove("P3"); }
+            else if(Flag_Page["page2_2.html"] == 1){ FlowcharaMove("P2_2"); }
+            else if(Flag_Page["page2_1.html"] == 1){ FlowcharaMove("P2_1"); }
+            else if(Flag_Page["page2.html"] == 1){ FlowcharaMove("P2"); }
+            else if(Flag_Page["page1.html"] == 1){ FlowcharaMove("P1"); }
+            else if(Flag_Page["pageindex.html"] == 1){ FlowcharaMove("INDEX"); }
+            else if(Flag_Page["pagestart.html"] == 1){ FlowcharaMove("START"); }
         });		
 	});
 	//初期設定

@@ -129,33 +129,16 @@ html, body{
 	background-color: #DF81A2;
 	z-index: 110;
 }
-#Logo>img{
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    margin: auto;
-    width: 128px;
-    z-index: 111;
-	animation-name: show;
-	animation-duration: 1s;
-}
-@keyframes show {
-	0% {
-		transform:translate(0,2em);
-		opacity:0;
-	}
-	100% {
-		transform:translate(0,0);
-		opacity:1;
-	}
+#LogoSVG>path{
+    stroke: #000000;
+    stroke-width: 6;
+    fill: rgba(0,0,0,0);
 }
 
 /* Footer表示 -------------------------*/
 footer{
     position: fixed;
-    bottom: 0;
+    bottom: 15px;
     width: 100%;
     margin: 0px;
     padding: 10px;
@@ -164,30 +147,62 @@ footer{
 }
 
 footer>#Chara{
+    position: fixed;
+    bottom: 5%;
+    width: 90px;
+    transform: scale(-1, 1);
+    -ms-interpolation-mode: nearest-neighbor;   /* IE8+ */
+    image-rendering: -webkit-optimize-contrast; /* Safari (WebKit) */
+    image-rendering: -moz-crisp-edges;          /* Firefox (Gecko) */
+    image-rendering: -o-crisp-edges;            /* Opera 12.x */
+    image-rendering: pixelated;                 /* Chrome 41+, Opera 29+ (CSS4) */
     z-index: 13;
 }
 
-footer>#Point>img{
+footer>#Point img{
+    position: fixed;
     float: left;
-    margin-right: 10%;
+    width: 50px;
+    bottom: 3%;
     z-index: 12;
 }
-footer>#Point>#Flow2>img{
-    float: left;
-    margin-right: 2%;
-    z-index: 12;
+footer>#Point #START{
+    margin-left: 1.5%;
 }
-footer>#Point>#Flow2>img:last-child{
-    margin-right: 10%;
+footer>#Point #INDEX{
+    margin-left: 10%;
+}
+footer>#Point #P1{
+    margin-left: 20%;
+}
+footer>#Point #P2{
+    margin-left: 30%;
+}
+footer>#Point #P2_1{
+    margin-left: 45%;
+}
+footer>#Point #P2_2{
+    margin-left: 50%;
+}
+footer>#Point #P3{
+    margin-left: 65%;
+}
+footer>#Point #P4{
+    margin-left: 75%;
+}
+footer>#Point #THANKS{
+    margin-left: 85%;
 }
 footer>#Line{
-    width: 90%;
-    margin-top: 13px;
-    margin-left: 10px;
+    position: fixed;
+    width: 84%;
+    bottom: 32px;
+    margin-left: 3%;
     padding: 0px;
-    font-size: 3px;
-    background-color: deeppink;
+    font-size: 2px;
+    background-color: white;
     color: deeppink;
+    opacity: 0.6;
     z-index: 11;
 }
 
@@ -206,7 +221,34 @@ footer>#Line{
     position: fixed;
     width: 100px;
     top: 70%;
-    right: 0;
+    right: 100px;
+    padding: .5em;
     z-index: 100;
+    border-radius: 10px;
+    transition: all .3s;
 }
-
+.next:hover{
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+}
+.next::after {
+	content: "go!";
+    position: fixed;
+    top: 100%;
+    right: 12%;
+	z-index: 101;
+	display: block;
+	padding: .5em;
+	background-color: rgba(255,0,0,0.6);
+    border-radius: 100px;
+	color: #fff;
+	opacity: 0;
+	transition: all .3s;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+    transform: rotate(5deg);
+}
+.next:hover::after {
+	top: 65%;
+	opacity: 1;
+}
