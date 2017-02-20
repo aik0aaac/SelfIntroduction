@@ -287,7 +287,12 @@ ul{
     margin-left: 150px;
     height: 100%;
 }
-#P2_2 .mini{
+#P2_2 .mini1{
+    margin: 0px;
+    font-size: .6em;
+    color: #888;
+}
+#P2_2 .mini2{
     font-size: .8em;
     text-align: center;
 }
