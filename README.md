@@ -14,8 +14,7 @@ https://aik0aaac.github.io/SelfIntroduction/
 ※このボタンはオンマウスで「go!」と書かれた赤い丸が出現します。ボタンが見つけずらい場合は、このことをヒントに探してみてください。  
 
 ## 使用ツール・ライブラリ
-- HTML5
-- CSS3
+- HTML5&CSS3
 - JavaScript
 - jQuery
 - fancybox
