@@ -23,13 +23,27 @@ var Flag_Page = { // ページのフラグ、1=訪問済み/0=未訪問
 };
 
 $(function() {
+    // ロゴ表示
+  $("#Logo-bg").css({
+    "display": "block"
+  });
+  new Vivus('LogoSVG', {
+    start: 'autostart',
+    type: 'async',
+    duration: 100,
+    animTimingFunction: Vivus.EASE
+  }, function() {
+    setTimeout(function() {
+      $("#Logo-bg").fadeOut("slow");
+    }, 200);
+  });
+
   //ページを表示させる箇所の設定
   var $content = $('.page-display');
 
   //ページ遷移ボタンをクリックした時の処理
   $(document).on('click', '.next', function(event) {
     $('.next').fadeOut("slow");
-    //$(".next").stop().animate({opacity:'0'},500);
     //まだ行ってないページのリンク先を検索、保存
     for (var f in Flag_Page) {
       if (!Flag_Page[f]) {
@@ -73,6 +87,7 @@ $(function() {
   });
   //初期設定
   getPage("pagestart.html");
+  console.log("aa");
 
   //ページを取得してくる関数
   function getPage(elm) {
@@ -83,11 +98,10 @@ $(function() {
       success: function(data) { // データ取得に問題なければページ内容表示
         $content.html(data).fadeIn(600);
         var $container = $('img');
-
         $container.imagesLoaded(function() {
           //page1の設定---------------------------------
           if (elm == "page1.html") {
-            $.each($("#P1 .img-box"), function(i, val) {
+            $.each($("#page1 .img-box"), function(i, val) {
               var w = $(val).innerWidth();
               var h = $(val).innerHeight();
               $(val).css({
@@ -100,7 +114,7 @@ $(function() {
             jQuery(function($) {
               $(".fancybox").attr('rel', 'group1').fancybox();
 
-              var $container = $('#P2_1 #gallery');
+              var $container = $('#page2-1 #gallery');
               $container.imagesLoaded(function() {
 
                 $container.masonry({
@@ -112,7 +126,7 @@ $(function() {
               });
             });
           } else if (elm == "page2_2.html") {
-            $.each($("#P2_2 .img-box"), function(i, val) {
+            $.each($("#page2-2 .img-box"), function(i, val) {
               var w = $(val).innerWidth();
               var h = $(val).innerHeight();
               $(val).css({
@@ -121,21 +135,6 @@ $(function() {
               })
             });
           }
-        });
-
-        // ロゴ表示
-        $("#Logo-bg").css({
-          "display": "block"
-        });
-        new Vivus('LogoSVG', {
-          start: 'autostart',
-          type: 'async',
-          duration: 100,
-          animTimingFunction: Vivus.EASE
-        }, function() {
-          setTimeout(function() {
-            $("#Logo-bg").fadeOut("slow");
-          }, 200);
         });
       },
       error: function() {
