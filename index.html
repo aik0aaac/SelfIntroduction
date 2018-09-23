@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
   <meta charset="UTF-8">
@@ -8,9 +8,9 @@
   <link rel="stylesheet" href="lib/bootstrap.min.css">
   <link rel="stylesheet" href="lib/jquery.fancybox.css" media="screen">
   <!-- 自作ファイル群 -->
-  <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/common_page.css">
-  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/common.min.css">
+  <link rel="stylesheet" href="css/common_page.min.css">
+  <link rel="stylesheet" href="css/background.min.css">
 
   <!-- Google Fonts+ -->
   <link href="https://fonts.googleapis.com/earlyaccess/mplus1p.css" rel="stylesheet" />
@@ -20,6 +20,7 @@
 
 <body>
 
+  <!-- ロゴ表示(Vivus.js使用) -->
   <div id="Logo-bg">
     <div id="Logo">
       <svg id="LogoSVG" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-800 -300 2000 2000">
@@ -36,46 +37,59 @@
 
 
   <div class="background">
-    <div class="pageDisplay"></div>
+    <div class="page-display">
+      <div class="page-error">
+        <h1>Oops!!</h1>
 
-    <div id="background_deco">
-      <div id="mountain">
-        <img src="img/index_back/mountain1.svg" alt="" class="mountain1">
-        <img src="img/index_back/mountain2.svg" alt="" class="mountain2">
-        <img src="img/index_back/mountain3.svg" alt="" class="mountain3">
+        <div>
+          何か問題が生じたみたいです…。<br>恐れ入りますが、ブラウザのリロードをお願いいたします。
+        </div>
       </div>
+    </div>
+
+    <div id="background-decoration">
+      <div id="mountain">
+        <img src="img/index_back/mountain1.svg" alt="" id="mountain1">
+        <img src="img/index_back/mountain2.svg" alt="" id="mountain2">
+        <img src="img/index_back/mountain3.svg" alt="" id="mountain3">
+      </div>
+
       <div id="cherry">
-        <img src="img/index_back/cherry.svg" alt="" id="c1">
-        <img src="img/index_back/cherry.svg" alt="" id="c2">
-        <img src="img/index_back/cherry.svg" alt="" id="c3">
-        <img src="img/index_back/cherry.svg" alt="" id="c4">
-        <img src="img/index_back/cherry.svg" alt="" id="c5">
-        <img src="img/index_back/cherry.svg" alt="" id="c2-1">
-        <img src="img/index_back/cherry.svg" alt="" id="c2-2">
-        <img src="img/index_back/cherry.svg" alt="" id="c2-3">
-        <img src="img/index_back/cherry.svg" alt="" id="c2-4">
-        <img src="img/index_back/cherry.svg" alt="" id="c2-5">
-        <img src="img/index_back/cherry.svg" alt="" id="c2-6">
-        <img src="img/index_back/cherry.svg" alt="" id="c2-7">
-        <img src="img/index_back/cherry.svg" alt="" id="c2-8">
+        <img src="img/index_back/cherry.svg" alt="" id="cherry1">
+        <img src="img/index_back/cherry.svg" alt="" id="cherry2">
+        <img src="img/index_back/cherry.svg" alt="" id="cherry3">
+        <img src="img/index_back/cherry.svg" alt="" id="cherry4">
+        <img src="img/index_back/cherry.svg" alt="" id="cherry5">
+        <img src="img/index_back/cherry.svg" alt="" id="cherry2-1">
+        <img src="img/index_back/cherry.svg" alt="" id="cherry2-2">
+        <img src="img/index_back/cherry.svg" alt="" id="cherry2-3">
+        <img src="img/index_back/cherry.svg" alt="" id="cherry2-4">
+        <img src="img/index_back/cherry.svg" alt="" id="cherry2-5">
+        <img src="img/index_back/cherry.svg" alt="" id="cherry2-6">
+        <img src="img/index_back/cherry.svg" alt="" id="cherry2-7">
+        <img src="img/index_back/cherry.svg" alt="" id="cherry2-8">
       </div>
     </div>
     <div class="next">START</div>
 
     <footer>
       <img id="Chara" src="img/footer_chara.gif" alt="キャラ">
+
       <div id="Point">
         <img src="img/footer_button.png" alt="" class="flowPoint" id="START">
         <img src="img/footer_button.png" alt="" class="flowPoint" id="INDEX">
         <img src="img/footer_button.png" alt="" class="flowPoint" id="P1">
         <img src="img/footer_button.png" alt="" class="flowPoint" id="P2">
+
         <div id="Flow2">
           <img src="img/footer_button.png" alt="" class="flowPoint:src" id="P2_1">
           <img src="img/footer_button.png" alt="" class="flowPoint:src" id="P2_2">
         </div>
+
         <img src="img/footer_button.png" alt="" class="flowPoint" id="P3">
         <img src="img/footer_button.png" alt="" class="flowPoint" id="P4">
-        <img src="img/footer_button.png" alt="" class="flowPoint" id="THANKS">
+        <img src="img/footer_button.png" alt="" class="flowPoint" id="END">
+
       </div>
       <div id="Line">--</div>
     </footer>

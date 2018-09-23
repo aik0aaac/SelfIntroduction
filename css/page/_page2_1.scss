@@ -1,0 +1,22 @@
+/*-- page2-1 ----------------------*/
+#page2-1 {
+  .page_text {
+    padding: 0.8em;
+  }
+
+  #gallery {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .fancybox {
+    margin: 3px;
+    padding: 2px;
+  }
+
+  .mini {
+    margin-left: 1em;
+    font-size: 0.7em;
+  }
+}

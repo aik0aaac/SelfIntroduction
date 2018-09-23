@@ -1,0 +1,38 @@
+/*-- page2-2 ----------------------*/
+#page2-2{
+  .con1 {
+    float: left;
+  }
+
+  .img-box:last-child {
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+  }
+
+  img {
+    width: 600px;
+  }
+
+  #skills {
+    float: left;
+    margin-left: 150px;
+    height: 100%;
+  }
+
+  .mini1 {
+    margin: 0px;
+    font-size: .6em;
+    color: #888;
+  }
+
+  .mini2 {
+    font-size: .8em;
+    text-align: center;
+  }
+
+  .progress {
+    background-color: #aaa;
+  }
+}

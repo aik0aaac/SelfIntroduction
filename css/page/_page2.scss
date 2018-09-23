@@ -1,0 +1,29 @@
+/*-- page2 ----------------------*/
+#page2{
+  .select {
+    float: left;
+    width: 45%;
+    height: 100%;
+    margin: 0 .5em;
+    background-color: white;
+    font-size: 48px;
+    text-align: center;
+    text-shadow: 0 3px 1px #aaa;
+    border: 8px solid #333;
+    border-collapse: separate;
+    transition: .5s;
+  }
+
+  .mini {
+    font-size: 35px;
+    color: #888;
+    text-align: center;
+
+  }
+
+  .select:hover {
+    background-color: blanchedalmond;
+    border: 1px solid #fff;
+    box-shadow: 0 0 20px #000;
+  }
+}
