@@ -221,16 +221,15 @@ footer>#Line{
     position: fixed;
     width: 100px;
     top: 70%;
-    right: 100px;
+    right: 10vw;
     padding: .5em;
-    z-index: 100;
+    color: white;
+    font-size: 24px;
+    background-color: rgba(0,0,0,0.5);
     border-radius: 10px;
     transition: all .3s;
+    z-index: 100;
 
-  &:hover{
-      color: white;
-      background-color: rgba(0,0,0,0.5);
-  }
   &::after {
   	content: "go!";
       position: fixed;

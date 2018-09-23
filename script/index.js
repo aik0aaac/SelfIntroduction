@@ -23,7 +23,7 @@ var Flag_Page = { // ページのフラグ、1=訪問済み/0=未訪問
 };
 
 $(function() {
-    // ロゴ表示
+  // ロゴ表示
   $("#Logo-bg").css({
     "display": "block"
   });
